@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quà tặng 20/10 💝</title>
+<title>Quà 20/10 💝</title>
 
 <style>
 * {
@@ -89,7 +89,7 @@ h1 {
 
 #letter h2 {
     margin-bottom: 20px;
-    color: #e91e63;
+    color: #f30051;
     line-height: 1.5;
 }
 
@@ -114,8 +114,8 @@ h1 {
 button {
     border: none;
     border-radius: 30px;
-    background: linear-gradient(90deg, #ff4f91, #e91e63);
-    color: white;
+    background: linear-gradient(90deg, #ff4f91, #eb0aaf);
+    color: rgb(205, 26, 154);
     padding: 13px 24px;
     margin: 12px 5px;
     font-size: 15px;
@@ -129,7 +129,7 @@ button:hover {
 }
 
 .qr-section {
-    background: white;
+    background: rgb(190, 11, 113);
     padding: 22px 15px;
     margin-top: 30px;
     border-radius: 20px;
@@ -194,7 +194,7 @@ footer {
     <h1>🌷 Happy Women's Day 🌷</h1>
 
     <p class="subtitle">
-        Gửi đến cô gái đặc biệt một món quà nhỏ<br>
+        Gửi đến cô gái đặc biệt một món quà nho nhỏ<br>
         Nhấn vào hộp quà để khám phá nhé! 💗
     </p>
 
@@ -202,7 +202,7 @@ footer {
         🎁
     </div>
 
-    <p>💌 Một món quà nhỏ, ngàn lời yêu thương 💌</p>
+    <p>💌 Một món quà nho nhỏ, ngàn lời yêu thương 💌</p>
 
     <div class="card" id="letter">
         <h2>🌸 Chúc mừng ngày 20/10 🌸</h2>
@@ -210,64 +210,30 @@ footer {
         <div class="heart">💖</div>
 
         <p class="message" id="message">
-Gửi cô gái đáng yêu!
+     Gửi cô gái đáng yêu!
 
-Chúc bạn ngày 20/10 thật vui vẻ,
-luôn xinh đẹp, hạnh phúc và bình an.
+    Chúc bạn ngày 20/10 thật vui vẻ,
+    luôn xinh đẹp, hạnh phúc và bình an.
+    Mong mọi điều tốt đẹp nhất sẽ đến với bạn.
+    Luôn mỉm cười và tự tin với chính mình nhé!
+    💐 Luôn xinh đẹp, vui vẻ, gặp toàn điều tốt đẹp và được yêu thương thật nhiều
+    Cảm ơn vì đã xuất hiện
+    và làm cho cuộc sống của tui thêm nhiều màu sắc.
 
-Mong mọi điều tốt đẹp nhất sẽ đến với bạn.
-Luôn mỉm cười và tự tin với chính mình nhé!
-
-Cảm ơn vì đã xuất hiện
-và làm cho cuộc sống này thêm nhiều màu sắc.
-
-Chúc bạn có một ngày thật đáng nhớ! 🌷
+    Chúc bạn có một ngày thật đáng nhớ! 🌷
         </p>
 
         <div class="heart">❤️</div>
-        <p>With love, 💕</p>
     </div>
 
-    <button onclick="openGift()">🎁 Mở món quà</button>
+    <button onclick="openGift()">🎁 Mở món quà hãy ắn liên tục</button>
 
-    <div class="qr-section">
-        <h2>💝 Tạo mã QR tặng quà</h2>
-
-        <p class="note">
-            Dán đường dẫn website quà tặng đã đăng lên Internet
-            vào ô dưới đây để tạo mã QR cho người nhận quét.
-        </p>
-
-        <input
-            type="url"
-            id="url"
-            placeholder="https://ten-website-cua-ban..."
-        >
-
-        <button onclick="createQR()">✨ Tạo mã QR</button>
-
-        <div>
-            <img id="qr" alt="Mã QR quà tặng 20/10">
-
-            <br>
-
-            <button id="download"
-                    onclick="downloadQR()"
-                    style="display:none">
-                📥 Tải mã QR
             </button>
         </div>
 
-        <p class="note">
-            Lưu ý: Phải sử dụng đường dẫn công khai của website.
-            Đường dẫn localhost hoặc file trên máy tính
-            sẽ không mở được trên điện thoại người nhận.
-        </p>
     </div>
 
-    <footer>
-        Made with ❤️ for October 20th
-    </footer>
+
 </div>
 
 <script>
@@ -282,27 +248,28 @@ function openGift() {
     });
 
     for (let i = 0; i < 25; i++) {
-        setTimeout(createHeart, i * 80);
+        setTimeout(createHeart, i * 100);
     }
 }
 
 function createHeart() {
-    const heart = document.createElement("div");
+    const Heart = document.createElement("span");
 
-    heart.className = "floating";
+    Heart.className = "floating";
 
-    const icons = ["💗", "💖", "💕", "🌸", "🌷", "❤️"];
+    const icons = ["💗", "💖", "💕", "🌸", "🌷", "❤️","🦁","🐯","🐶","🐽"];
+    
 
-    heart.textContent =
+    Heart.textContent =
         icons[Math.floor(Math.random() * icons.length)];
 
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (18 + Math.random() * 20) + "px";
-    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+    Heart.style.left = Math.random() * 200 + "vw";
+    Heart.style.fontSize = (28 + Math.random() * 40) + "px";
+    Heart.style.animationDuration = (7 + Math.random() * 10) + "s";
+    
+    document.body.appendChild(Heart);
 
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 7000);
+    setTimeout(() => Heart.remove(), 7000);
 }
 
 function createQR() {
